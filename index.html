@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Stairwell — inspired by SCP-087</title>
+<style>
+body{margin:0;background:#000;color:#ccc;font-family:Georgia,serif;overflow:hidden}
+.screen{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
+.screen.on{display:flex}
+h1{font-size:3rem;letter-spacing:.3em;color:#ddd;margin:0}
+button{background:none;border:1px solid #555;color:#ccc;padding:10px 28px;font:inherit;cursor:pointer;min-width:200px}
+button:hover{border-color:#ccc;color:#fff}
+small{color:#777;max-width:640px;line-height:1.5}
+#game{position:fixed;inset:0}
+</style></head><body>
+<div id="view" style="position:fixed;inset:0"><canvas id="game"></canvas></div>
+<div id="title" class="screen on"><h1>THE STAIRWELL</h1><small>Inspired by SCP-087. A fan game, not a true story.</small>
+<button data-go="play">Begin descent</button><button data-go="settings">Settings</button><button data-go="credits">Credits</button></div>
+<div id="settings" class="screen"><h2>Settings</h2>
+<label>Volume <input id="vol" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+<label>Mouse sensitivity <input id="sens" type="range" min="0.1" max="2" step="0.1" value="1"></label>
+<label>Brightness <input id="bright" type="range" min="0.6" max="2" step="0.05" value="1"></label>
+<button data-go="title">Back</button></div>
+<div id="credits" class="screen"><h2>Credits</h2>
+<small>Game by Poby, Oraly, Mochi and Mr. Fart (ORA.AI)<br>Distributed by Oranutan<br><br>
+"SCP-087" by Zaeyde, from the SCP Wiki. Source: <a href="https://scpwiki.com/scp-087" style="color:#999">https://scpwiki.com/scp-087</a>. Licensed under CC BY-SA 3.0.<br>This game is also released under CC BY-SA 3.0.<br><br>
+Sound credits: see audio/SOURCES.md</small>
+<button data-go="title">Back</button></div>
+<script type="module" src="js/main.js"></script>
+</body></html>
